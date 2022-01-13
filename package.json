@@ -1,0 +1,20 @@
+{
+  "name": "bundled-appsscript",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:addon:dev": "node ./scripts/build dev"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
+    "async": "^3.2.3",
+    "fs-extra": "^10.0.0"
+  }
+}
