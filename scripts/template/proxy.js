@@ -1,17 +1,4 @@
-var userProperties = PropertiesService.getUserProperties();
-var version = userProperties.getProperty("__addonVersion") || "stable";
-console.log("User version: " + version);
-
-function _proxy(name, ...args) {
-    console.log(name, version, ...args);
-    if(__aliases[version] != null) {
-        return Api[__aliases[version]][name](...args);
-    } else {
-        return Api[version][name](...args);
-    }
-
-}
+// in current state it makes no sense to use this template, but in a more complex version (with bundle versioning)
+//      it will come handy to define some helper functions
 
 //**fns
-
-//**aliases

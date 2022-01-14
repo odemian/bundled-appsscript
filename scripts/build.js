@@ -42,9 +42,8 @@ function copyServer(onDone) {
 
 function createApiProxy(onDone) {
     const apis = [fs.readJsonSync(path.join(".", "build", "apis.json"))];
-    const aliases = [];
+    const proxyFile = createProxy("Bundle", apis);
 
-    const proxyFile = createProxy(apis, aliases);
     fs.writeFileSync(path.join(".", "build", "apiProxy.js"), proxyFile);
     console.log("Api proxy created.");
     onDone();
